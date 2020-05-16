@@ -1,9 +1,11 @@
 //objects are being called by the factory method that will be a abstract 
 // eg:Let's suppose you are desigining a Logistic management, you currrntly have the truck
 // but now if you want to extend it to the sea the you can use the factory method to extend it 
+// Chair (Modern,Vintage)                  
+// Table (Modern,Vintage)
 
-
-#include <iostream>
+// User want both the types should be same Modern,Modern or Vintage,Vintage
+#include <iostream> 
 using  namespace std ;
 class Product
 {
@@ -58,7 +60,7 @@ class CreatorA:public Creator
     }
 
 };
-// cretor for object B
+// creator for object B
 class CreatorB:public Creator
 {
     public:
@@ -82,3 +84,6 @@ int main()
 
 
 }
+
+//note : All theses creational pattern are easy but lengthy 
+// The idea is to add the additional feature without making change to the code
