@@ -9,7 +9,7 @@ using namespace std ;
 class XML
 {
     public:
-        string Request()
+        virtual string Request()
         {
             return "Hello -World" ;
         }
@@ -29,11 +29,13 @@ class Adapter:public XML
         JSON *m_json;
         Adapter(JSON *json)
         {
+        
             m_json = json;
         }   
         string Request()
         {
-           string json =  m_json->Specificreq();
+    
+           string json = this->m_json->Specificreq();
            cout << json << endl;
            return json;
         }   
